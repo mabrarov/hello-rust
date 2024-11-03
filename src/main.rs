@@ -6,5 +6,5 @@ fn main() {
     let message = String::from("Hello, Rust!");
     let width = message.chars().count();
     let writer = BufWriter::new(stdout.lock());
-    let _ = say("Hello. Rust!", width, writer);
+    let _ = say(message.as_ref(), width, writer);
 }
